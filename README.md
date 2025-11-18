@@ -16,7 +16,8 @@
 
 ---
 
-![Architecture Thumbnail](thumbnail.png)
+![Architecture Thumbnail](thumbnail.jpg)
+
 
 ## Problem Statement
 
