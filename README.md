@@ -5,124 +5,46 @@
 [![Python](https://img.shields.io/badge/Python-3.11+-3776AB?logo=python)](https://www.python.org/)
 
 > **Track:** Enterprise Agents  
-> **Author:** Avesh Mishra  
+> **Author:** Akarashak Mishra  
 > **Submission:** Kaggle Agents Intensive - Capstone Project
 
 ---
 
-## 🎯 Overview
+# Project Overview – SupportHub AI
 
-**SupportHub AI** is a sophisticated multi-agent system that revolutionizes enterprise customer support operations through intelligent automation. It addresses critical challenges: data silos, manual workflows, slow response times, and limited scalability.
-
-### Key Results
-
-- **80% faster** first response (8 hours → 1 hour)
-- **90% accuracy** in ticket categorization
-- **$500K annual** cost savings
-- **85% customer satisfaction**
+> **NOTE:** This is a sample submission for the [Kaggle Agents Intensive Capstone project](https://www.kaggle.com/competitions/agents-intensive-course-capstone-2025/). Use this as a structuring reference for your submission. Inspired by multi-agent samples like [ADK-Samples](https://github.com/google/adk-samples). Special thanks to the community contributors.
 
 ---
 
-## 🏗️ Architecture
+![Architecture Thumbnail](thumbnail.png)
 
-```
-support_hub_coordinator (Main Orchestrator)
-├── ticket_triage_agent          → Categorizes & prioritizes
-├── context_aggregation_agent    → Parallel data fetching
-│   ├── crm_agent               → CRM data
-│   ├── ticket_history_agent    → Past tickets
-│   └── knowledge_base_agent    → Documentation
-├── response_generation_agent   → Loop with validation
-├── escalation_agent            → Routes to humans
-└── analytics_agent             → Monitors trends
-    ├── trend_analyzer
-    ├── sentiment_monitor
-    └── sla_tracker
-```
+## Problem Statement
+
+Enterprise customer support suffers from:
+- **Data silos:** Info scattered across CRM, email, tickets, chat.
+- **Manual work:** Agents spend up to 40% of time on repetitive triage/routing/tasks.
+- **Slow responses:** Customers may wait 8+ hours for first contact.
+- **Variable quality:** Support is inconsistent due to experience gaps.
+- **Scaling issues:** Adding headcount is expensive as demand grows.
+
+Manual processes can’t scale, maintain quality, or deliver efficiency in modern enterprises.
 
 ---
 
-## ✨ Features
+## Solution Statement
 
-✅ **Multi-agent coordination** (hierarchical)
-✅ **ParallelAgent** for concurrent execution
-✅ **LoopAgent** with validation
-✅ **SequentialAgent** for analytics
-✅ **6 custom tools** including MCP
-✅ **Memory Bank** for long-term context
-✅ **Cloud Logging** & Trace
-✅ **Evaluation framework** (5-pillar)
+**SupportHub AI** is a modular, fully-automated multi-agent system that:
+- Instantly triages, categorizes, and prioritizes support tickets.
+- Aggregates all relevant information (CRM, prior tickets, KB) for every customer.
+- Crafts, checks, and refines professional support responses using AI.
+- Escalates challenging issues autonomously.
+- Provides dashboards for management on SLAs, sentiment, volume trends, and outcomes.
 
----
-
-## 🚀 Quick Start
-
-### 1. Install Dependencies
-```bash
-pip install -r requirements.txt
-```
-
-### 2. Set API Key
-```bash
-export GEMINI_API_KEY="AIzaSyDqAthpwhYNsaGIHvLiy7t6lfOngTMsa2A"
-```
-
-### 3. Run Agent
-```bash
-python agent.py
-```
-
-### 4. Launch Web UI
-```bash
-adk web
-```
-
-Open: http://localhost:8000
+Agents operate autonomously or in coordinated workflows, streamlining operations and reducing human effort.
 
 ---
 
-## 📁 Files Included
+## Architecture
 
-| File | Purpose |
-|------|---------|
-| `agent.py` | Main multi-agent system (574 lines) |
-| `config.py` | Configuration & settings |
-| `evaluator.py` | Testing framework (354 lines) |
-| `requirements.txt` | Dependencies |
-| `README.md` | This file |
-| `SETUP_GUIDE.md` | Detailed setup instructions |
-| `LICENSE` | Apache 2.0 |
+Core to SupportHub AI is the `support_hub_coordinator`, an example of multi-agent orchestration.
 
----
-
-## 💼 Use Cases
-
-1. **Ticket Triage** - Auto-categorize support tickets
-2. **Context Retrieval** - Parallel fetch from CRM, history, KB
-3. **Response Generation** - AI-drafted responses with validation
-4. **Smart Escalation** - Route to right specialist
-5. **Analytics** - Monitor trends & SLA compliance
-
----
-
-## 🧪 Testing
-
-```bash
-python -m pytest tests/test_agent.py -v
-```
-
----
-
-## 📤 GitHub & Kaggle Submission
-
-See `SETUP_GUIDE.md` for complete instructions.
-
----
-
-## 📞 Questions?
-
-Email: aveshmishra51@gmail.com
-
----
-
-**Built with Google Agent Development Kit** 🚀
