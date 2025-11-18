@@ -1,0 +1,27 @@
+
+# Core ADK and Google AI
+google-adk>=0.2.0
+google-cloud-aiplatform>=1.40.0
+google-generativeai>=0.4.0
+vertexai>=1.40.0
+
+# Google Cloud Services
+google-cloud-logging>=3.5.0
+google-cloud-trace>=1.11.0
+
+# Async support
+aiohttp>=3.9.0
+
+# Data processing
+pandas>=2.1.0
+numpy>=1.24.0
+
+# Development & Testing
+pytest>=7.4.0
+pytest-asyncio>=0.21.0
+black>=23.7.0
+pylint>=2.17.0
+
+# Optional: MCP server implementations
+# salesforce-mcp-server>=0.1.0
+# hubspot-mcp-server>=0.1.0
